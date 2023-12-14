@@ -16,15 +16,55 @@
 <body>
     <nav>
         <div class="nav-left">
-            <a href="#" id="logo">RSS News</a>
+            <a href="http://rss/" id="logo">RSS News</a>
         </div>
         <div class="nav-center">
             <i class="fa-solid fa-xmark" id="closeBtn"></i>
             <ul>
                 <li><a href="http://rss/">Accueil</a></li>
-                <li><a href="#">Actualités</a></li>
-                <li><a href="#">Jeux vidéos</a></li>
-                <li><a href="#">Sports</a></li>
+                <?php
+                if (isset($_GET['actu'])) { ?>
+                    <li><a href="#"><?= $_GET['actu'] ?></a></li>
+                <?php } else if (isset($_GET['gaming'])) { ?>
+                    <li><a href="#"><?= $_GET['gaming'] ?></a></li>
+                <?php } else if (isset($_GET['eco'])) { ?>
+                    <li><a href="#"><?= $_GET['eco'] ?></a></li>
+                <?php } else if (isset($_GET['sports'])) { ?>
+                    <li><a href="#"><?= $_GET['sports'] ?></a></li>
+                <?php } else if (isset($_GET['tech'])) { ?>
+                    <li><a href="#"><?= $_GET['tech'] ?></a></li>
+                <?php } else{ ?>
+                        <li><a href="#">ACTUALITES</a></li>
+                  <?php }?>
+                  <?php
+                if (isset($_GET['actu'])) { ?>
+                    <li><a href="#"><?= $_GET['actu'] ?></a></li>
+                <?php } else if (isset($_GET['gaming'])) { ?>
+                    <li><a href="#"><?= $_GET['gaming'] ?></a></li>
+                <?php } else if (isset($_GET['eco'])) { ?>
+                    <li><a href="#"><?= $_GET['eco'] ?></a></li>
+                <?php } else if (isset($_GET['sports'])) { ?>
+                    <li><a href="#"><?= $_GET['sports'] ?></a></li>
+                <?php } else if (isset($_GET['tech'])) { ?>
+                    <li><a href="#"><?= $_GET['tech'] ?></a></li>
+                <?php } else{ ?>
+                        <li><a href="#">JEUX VIDEOS</a></li>
+                  <?php }?>
+                  <?php
+                if (isset($_GET['actu'])) { ?>
+                    <li><a href="#"><?= $_GET['actu'] ?></a></li>
+                <?php } else if (isset($_GET['gaming'])) { ?>
+                    <li><a href="#"><?= $_GET['gaming'] ?></a></li>
+                <?php } else if (isset($_GET['eco'])) { ?>
+                    <li><a href="#"><?= $_GET['eco'] ?></a></li>
+                <?php } else if (isset($_GET['sports'])) { ?>
+                    <li><a href="#"><?= $_GET['sports'] ?></a></li>
+                <?php } else if (isset($_GET['tech'])) { ?>
+                    <li><a href="#"><?= $_GET['tech'] ?></a></li>
+                <?php } else{ ?>
+                        <li><a href="#">ECONOMIES</a></li>
+                  <?php }?>
+                
             </ul>
         </div>
         <div class="nav-right">
